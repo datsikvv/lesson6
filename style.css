@@ -1,4 +1,4 @@
-body, nav ul {
+body, div nav ul {
 	margin: 0;
 	padding: 0;
 }
@@ -31,6 +31,13 @@ div nav {
     margin-left: -270px;
     top: 25px;
 }
+div nav ul {
+	 /* positioning 
+        position:relative;
+        z-index:1000;*/
+}
+
+
 div nav ul li	{
 	float: left;
 	list-style: none;
@@ -43,17 +50,32 @@ div nav ul li a {
 	font-size: 20px;
 }
 div nav ul li ul {
-	display: none;
+	/*display: none;
     background-color: black;
     min-width: 130px;
     position: absolute;
     z-index: 99999;
     top:38px;
     border-radius: 5px;
-    padding: 5px;
+    padding: 5px;*/
+
+        background-color: black; 
+     	min-width: 130px;
+     	border-radius: 5px;
+        position:absolute;
+       height: 0;
+        overflow: hidden;
+        top:38px;
+		 -webkit-transition: height 1.5s ease-in;
+        -moz-transition: height 1.5s ease-in;
+        -o-transition: height 1.5s ease-in;
+        -ms-transition: height 1.5s ease-in;
+        transition: height 1.5s ease-in;
+
     }
 div nav ul li:hover ul {
-	display: block;
+	height: 130px;
+
 }
 div nav ul li ul li {
 	float: none;

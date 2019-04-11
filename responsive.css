@@ -45,6 +45,10 @@ div nav {
 	left: 0px;
 	z-index: 99999;
 	margin: 0px;
+    visibility: hidden;
+  	position: absolute;
+  	transition: 0.2s 1s;
+  	opacity: 0;
 }
 
 div article {
@@ -63,7 +67,7 @@ margin-bottom: 1%;
 .btn {
 	padding: 5px 145px;
 }
-.header-menu, div nav {
+.header-menu {
 	display: none;
 }
 div a img {
@@ -74,17 +78,16 @@ header > div > img {
 	display: block;
 }
 header > div > img:hover{
-padding-bottom: 100px;
-padding-right: 800px; 
+/*padding-bottom: 100px;
+padding-right: 800px; */
 }
-header > div > img:hover ~ nav {
-display: block;
+header > div > img:hover ~ nav, div nav:hover {
+	 visibility: visible;
+  transition-delay: 0s;
+  opacity: 10;
+
 }
-div nav:hover {
-	display: block;
-transition: .4s ease-out;
-     transition-delay: 0.5s;
-}
+
 div>nav>ul>li {
 	float: none;
 	display: block;
